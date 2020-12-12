@@ -27,7 +27,7 @@ fetch(api)
    celGrade=Math.floor(temp-273,15)
 
 tempZona.textContent=`${country}, ${name}`;
-tempGrado.textContent=celGrade;
+tempGrado.textContent=`${celGrade}°c`;
 })
     });
 }
