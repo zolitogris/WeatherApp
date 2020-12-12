@@ -18,6 +18,7 @@ body{
     width: 50%;
     display: flex;
     justify-content: space-around;
+    font-family:'Times New Roman', Times, serif;
     align-items: center;
 }
 .temp{

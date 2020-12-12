@@ -4,7 +4,9 @@ let long;
 let lat;
 let tempDescrip=document.querySelector(".temp-decription");
 let tempGrado=document.querySelector(".temp-grados");
+let tempZona=document.querySelector(".Zona");
 let celGrade;
+let name,country;
 
 if(navigator.geolocation){
 navigator.geolocation.getCurrentPosition(posi=>{
@@ -20,8 +22,11 @@ fetch(api)
 .then(data=>{
     console.log(data);
    const {temp}=data.main
+   name=data.name
+   country=data.sys.country
    celGrade=Math.floor(temp-273,15)
 
+tempZona.textContent=`${country}, ${name}`;
 tempGrado.textContent=celGrade;
 })
     });
