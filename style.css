@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(#ADD8E6,#008B8B);
+    color:#E6E6FA;
+}
+.location,.temp{
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.temp{
+    flex-direction: column;
+}
+
+.grados{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.grados span{
+ margin:10px;
+ font-size: 30px;
+}
