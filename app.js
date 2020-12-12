@@ -7,6 +7,8 @@ let tempGrado=document.querySelector(".temp-grados");
 let tempZona=document.querySelector(".Zona");
 let celGrade;
 let name,country;
+let weather = {};
+let tempIcon=document.querySelector(".weather-icon");
 
 if(navigator.geolocation){
 navigator.geolocation.getCurrentPosition(posi=>{
@@ -23,12 +25,13 @@ fetch(api)
     console.log(data);
    const {temp}=data.main
    name=data.name
-   
+   weather.iconId=data.weather[0].icon;
    country=data.sys.country
    celGrade=Math.floor(temp-273,15)
-
+   
 tempZona.textContent=`${country}, ${name}`;
 tempGrado.textContent=`${celGrade}°c`;
+tempIcon.innerHTML=`<img src="icons/${weather.iconId}.png"/>`;
 })
     });
 }
