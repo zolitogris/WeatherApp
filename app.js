@@ -23,6 +23,7 @@ fetch(api)
     console.log(data);
    const {temp}=data.main
    name=data.name
+   
    country=data.sys.country
    celGrade=Math.floor(temp-273,15)
 
