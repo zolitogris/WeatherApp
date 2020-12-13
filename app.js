@@ -1,5 +1,8 @@
 window.addEventListener('load',()=>{
 
+    window.setTimeout(function () {
+        window.location.reload();
+      }, 15000);
 let long;
 let lat;
 let tempDescrip=document.querySelector(".temp-description");
