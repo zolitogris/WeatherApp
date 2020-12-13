@@ -37,5 +37,8 @@ tempIcon.innerHTML=`<img src="icons/${weather.iconId}.png"/>`;
 })
     });
 }
+else{
+    alert("Sorry, no position available");
+}
 }
 );
